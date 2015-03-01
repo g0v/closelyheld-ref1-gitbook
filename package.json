@@ -1,7 +1,7 @@
 {
-  "name": "telework-gitbook",
+  "name": "closelyheld-ref1-gitbook",
   "version": "0.0.1",
-  "description": "數位生活：電傳勞動",
+  "description": "閉鎖型公司：草案 #1",
   "private": true,
   "devDependencies": {
     "gitbook": "^1.5.0",
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "republish": "npm run republish:lexicon && npm run republish:glossary",
-    "republish:lexicon": "google-spreadsheet-download 1CGni6oPLXliLGWleBSCHYd3zQfsiIc5-SSOfS3F9TTg 4 > lexicon.json",
+    "republish:lexicon": "google-spreadsheet-download 1CGni6oPLXliLGWleBSCHYd3zQfsiIc5-SSOfS3F9TTg 1 > lexicon.json",
     "republish:glossary": "node -e 'JSON.parse(require(\"fs\").readFileSync(\"lexicon.json\")).map(function(d){if(d[\"title\"]&&d[\"definition\"]){console.log(\"\\n# \"+d[\"title\"]+\"\\n\"+d[\"definition\"].trim().replace(/\\n{2,}/g,\"\\n\"))}})' > GLOSSARY.md",
     "postinstall": "gitbook install .",
     "test": "npm run build",
@@ -21,10 +21,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/g0v/telework-gitbook.git"
+    "url": "https://github.com/g0v/closelyheld-ref1-gitbook.git"
   },
   "bugs": {
-    "url": "https://github.com/g0v/telework-gitbook/issues"
+    "url": "https://github.com/g0v/closelyheld-ref1-gitbook/issues"
   },
-  "homepage": "https://github.com/g0v/telework-gitbook"
+  "homepage": "https://github.com/g0v/closelyheld-ref1-gitbook"
 }
